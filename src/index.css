@@ -9,10 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+@media only screen and (min-width: 830px) {
+body{     
   background-image: url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-Position: center;
-  background-Size: cover;
   background-Repeat: no-repeat;
+  background-size:100%;
+  overflow: auto;
+}
 }
 
 code {
