@@ -39,6 +39,7 @@ const Login = () => {
             <label class="form-check-label" for="exampleCheck1">
               Mantenha-me Conectado
             </label>
+            <a href="/Cadastro"> Cadastro </a>
           </div>
           <button type="submit" class="btn btn-primary">
             Login
@@ -48,4 +49,4 @@ const Login = () => {
     </div>
   );
 };
-export { Login };
+export default Login;

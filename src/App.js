@@ -1,14 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import {Login} from './pages/login/index'
-
-function App() {
-  return (
-    <div className="App">
-     <Login/>
-        
-    </div>
-  );
-}
+import "./App.css";
+import Routes from "./routes";
+const App = () => <Routes />;
 
 export default App;
