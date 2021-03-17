@@ -1,17 +1,19 @@
-import React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Cadastro from "./pages/Cadastro/index";
-import Home from "./pages/Home/index";
-import Login from "./pages/Login/index";
-import NotFound from "./pages/NotFound";
-const Routes = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/Login" component={Login} />
-      <Route exact path="/cadastro" component={Cadastro} />
-      <Route component={NotFound} />
-    </Switch>
-  </BrowserRouter>
-);
+import React, { useContext } from "react";
+import { Route, Redirect } from "react-router-dom";
+import { AuthContext } from "./pages/Auth/auth";
+const Routes = ({ component: RouteComponent, ...rest }) => {
+  const {currentUser} = useContext(AuthContext);
+  return (
+    <Route
+    {...rest}
+    render={routeProps => 
+    !!currentUser ? (
+      <RouteComponent  {...routeProps} />
+    ) : (
+      <Redirect to={"/Login"} />
+      )
+    }
+    />
+  );
+};
 export default Routes;
