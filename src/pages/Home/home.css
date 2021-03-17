@@ -1,2 +1,25 @@
 
-   
+.divBar{
+    height: 50px;
+    background-color: khaki;
+}
+.busca{
+    width: 190px;
+    height: 35px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.btBuscar{
+    padding: 2;
+    margin-bottom: 30px;
+    height: 35px;
+}
+
+.ulNav{
+    align-items: center;
+    justify-content: flex-end;
+    float: right;
+}
+
+
