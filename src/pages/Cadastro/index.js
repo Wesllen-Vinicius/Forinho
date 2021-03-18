@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import "./cadastro.css";
 import { withRouter } from "react-router";
-import app from "../Firebase/index";
+import Firebase from "../Firebase/index";
 import { GrTerminal } from "react-icons/gr";
 
 const Cadastro = ({ history }) => {
@@ -10,9 +10,10 @@ const Cadastro = ({ history }) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await app
-          .auth()
-          .createUserWithEmailAndPassword(email.value, password.value);
+        await Firebase.auth().createUserWithEmailAndPassword(
+          email.value,
+          password.value
+        );
         history.push("/");
       } catch (error) {
         alert(error);

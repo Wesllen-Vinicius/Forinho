@@ -1,2 +1,31 @@
 
+.barraDireita{
+    position:  fixed;
+    float: left;
+    border: 2px solid gray;
+    width: 33%;
+    height: 930px;
+    
+    
+}
+
+.cards{
+    width: 33%;
+    display: flex;
+    position: relative;
+    display: inline-block;
+    height: 930px;
+    left: 33.5%;
    
+}
+.barraEsquerda{
+    position:  fixed;
+    float: right;
+    border: 2px solid gray;
+    width: 33%;
+    height: 930px;
+    left: 67%;
+}
+
+
+

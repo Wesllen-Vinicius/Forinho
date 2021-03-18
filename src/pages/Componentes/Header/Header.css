@@ -1,0 +1,59 @@
+@media only screen and (min-width: 992px) {
+
+.divBar{
+    height: 50px;
+    background-color: khaki;
+    
+}
+.busca{
+    width: 190px;
+    height: 35px;
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.btBuscar{
+    padding: 2;
+    margin-bottom: 30px;
+    height: 35px;
+}
+
+.space{
+    
+    width: 80%;
+}
+}
+@media only screen and (max-width: 992px) {
+.divBar{
+    background-color: none;
+
+}
+a{
+    color: white;
+}
+    .space{
+    display: none;
+}
+.Menu{
+    height: 70px;
+    margin-bottom: 20px;
+}
+.busca{
+    height: 4em;
+    margin-top: 20px;
+}
+}
+@media only screen and (max-width: 721px) {
+.Menu{
+    margin-top: 30px;
+}
+.btBuscar{
+    height: 50px;
+    margin-top: 25px;
+
+
+}
+.logo{
+margin-bottom: 20px;
+}
+}

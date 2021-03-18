@@ -1,6 +1,6 @@
 import React, { useCallback, useContext } from "react";
 import { withRouter, Redirect } from "react-router";
-import app from "../Firebase/index";
+import Firebase from "../Firebase/index";
 import { AuthContext } from "../Auth/auth";
 import "./login.css";
 import { GrTerminal } from "react-icons/gr";
@@ -10,9 +10,10 @@ const Login = ({ history }) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+        await Firebase.auth().signInWithEmailAndPassword(
+          email.value,
+          password.value
+        );
         history.push("/");
       } catch (error) {
         alert(error);
