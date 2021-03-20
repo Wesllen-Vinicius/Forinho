@@ -1,2 +1,12 @@
-
+.cards{
+    width: 33%;
+    display: flex;
+    position: relative;
+    display: inline-block;
+    height: 930px;
+    left: 33.5%;
    
+}
+
+
+

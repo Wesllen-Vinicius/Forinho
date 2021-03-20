@@ -1,0 +1,9 @@
+.BarraDireita{
+    position:  fixed;
+    float: right;
+    border: 2px solid gray;
+    width: 33%;
+    height: 930px;
+    left: 67%;
+    background-color: white;
+}
