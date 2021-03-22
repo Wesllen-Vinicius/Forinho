@@ -1,6 +1,6 @@
 import React from "react";
-import "../BarraDaEsquerda/index.css"
+import "../BarraDaEsquerda/barraEsquerda.css"
 const BarraEsquerda = () => (
-    <div class="page barraEsquerda">  </div>
+    <div class="barraEsquerda">  </div>
   );
   export default BarraEsquerda;

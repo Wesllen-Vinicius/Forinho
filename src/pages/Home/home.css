@@ -1,12 +1,24 @@
-.cards{
-    width: 33%;
-    display: flex;
+.cards{ 
+    border-radius: 7px;
     position: relative;
+    width: 50%;
     display: inline-block;
     height: 930px;
-    left: 33.5%;
-   
+    left: 15%;
+    border: 1px solid blueviolet;
 }
 
+.espacoTop {
+    margin-bottom: 30px;
+}
 
+.postMenu {
+    border-radius: 7px;
+    left: 15%;
+    border: 1px solid blueviolet;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 60px;
+}
 

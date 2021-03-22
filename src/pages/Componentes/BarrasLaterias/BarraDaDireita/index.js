@@ -1,7 +1,7 @@
 import React from "react";
-import "../BarraDaDireita/index.css"
+import "../BarraDaDireita/barraDireita.css"
 const BarraDireita = () => (
-    <div class="page BarraDireita">  
+    <div class="BarraDireita">  
         <ul class="list-group">
             <li class="list-group-item active" aria-current="true">An active item</li>
             <li class="list-group-item">A second item</li>
