@@ -1,0 +1,10 @@
+.BarraDireita{
+    border-radius: 7px;
+    position:  fixed;
+    float: right;
+    border: 1px solid blueviolet;
+    width: 25%;
+    height: 930px;
+    left: 67%;
+    background-color: white;
+}

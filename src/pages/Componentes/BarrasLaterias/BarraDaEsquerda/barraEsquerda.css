@@ -1,0 +1,7 @@
+.barraEsquerda{
+    position:  fixed;
+    float: left;
+    width: 10%;
+    height: 930px; 
+    background-color: none;
+}

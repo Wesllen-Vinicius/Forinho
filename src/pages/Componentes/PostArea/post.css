@@ -1,0 +1,23 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 105px 144px 135px 130px;
+    
+    grid-template-rows: 120px 50px;
+    gap: 0px 0px;
+    height: 200px;
+    grid-template-areas:
+      "Avatar Input Input Input"
+      "botoesIMG botaoGif botaoEmoji botaoPostar"
+      ". . . .";
+  }
+  .Avatar { grid-area: Avatar; }
+  .Input { grid-area: Input; }
+  .botoesIMG { grid-area: botoesIMG; }
+  .botaoGif { grid-area: botaoGif; }
+  .botaoEmoji { grid-area: botaoEmoji; }
+  .botaoPostar { grid-area: botaoPostar; }
+
+img{
+    height: 60px;
+    width: 60px;
+}

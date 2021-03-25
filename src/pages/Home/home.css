@@ -1,31 +1,32 @@
-
-.barraDireita{
-    position:  fixed;
-    float: left;
-    border: 2px solid gray;
-    width: 33%;
-    height: 930px;
-    
-    
-}
-
-.cards{
-    width: 33%;
-    display: flex;
+.cards{ 
     position: relative;
+    width: 50%;
     display: inline-block;
     height: 930px;
-    left: 33.5%;
+    left: 15%;
    
 }
-.barraEsquerda{
-    position:  fixed;
-    float: right;
-    border: 2px solid gray;
-    width: 33%;
-    height: 930px;
-    left: 67%;
+.cardsBorder{
+    border: 2px solid blueviolet;
+    border-radius: 4px;
 }
 
+.espacoTop {
+    margin-bottom: 30px;
+}
 
+.postMenu {
+    border-radius: 4px;
+    left: 15%;
+    border: 2px solid blueviolet;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    margin-bottom: 60px;
+   
+}
+.card:hover{
+    background-color: rgba(0,0,0,0.02);
+}
 
