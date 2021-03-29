@@ -1,8 +1,10 @@
 @media only screen and (min-width: 992px) {
 
 .divBar{
-    border: 1px solid  indigo;
+    border-bottom: 3px solid  blueviolet;
     height: 45px;
+    background-color: aqua;
+    
     
 }
 .busca{
@@ -22,6 +24,9 @@
     
     width: 80%;
 }
+.logo{
+    margin-left: 30px;
+    }
 }
 @media only screen and (max-width: 992px) {
 .divBar{

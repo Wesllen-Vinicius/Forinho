@@ -8,9 +8,11 @@ import Firebase from "../../Firebase/index";
 const Header = () => (
   <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-light divBar">
     <div class="container-fluid divBar">
-      <a class="navbar-brand" href="/">
-        <GrTerminal size="50px" class="logo" />
-      </a>
+      <div class="logo">
+        <a class="navbar-brand" href="/">
+          <GrTerminal size="50px" />
+        </a>
+      </div>
       <div class="Menu">
         <button
           class="navbar-toggler "
