@@ -1,32 +1,26 @@
-.cards{ 
-    position: relative;
-    width: 50%;
-    display: inline-block;
-    height: 930px;
-    left: 15%;
-   
-}
-.cardsBorder{
-    border: 2px solid blueviolet;
-    border-radius: 4px;
-}
-
-.espacoTop {
-    margin-bottom: 30px;
-}
-
-.postMenu {
-    border-radius: 4px;
-    left: 15%;
-    border: 2px solid blueviolet;
-    position: relative;
-    width: 50%;
-    text-align: center;
+.page {
     display: flex;
-    margin-bottom: 60px;
-   
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
 }
-.card:hover{
-    background-color: rgba(0,0,0,0.02);
+
+.card-body {
+    border-bottom: 2px solid grey;
+}
+
+
+.feed::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.feed {
+    border-right: 1px solid var(--twitter-background);
+    padding: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 

@@ -1,20 +1,20 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
-import Firebase from "../Firebase/index";
-import { AuthContext } from "../Auth/auth";
-import "./login.css";
-import { GrTerminal } from "react-icons/gr";
+import React, { useCallback, useContext } from 'react';
+import { withRouter, Redirect } from 'react-router';
+
+import { AuthContext } from '../Auth/auth';
+import './login.css';
+import { GrTerminal } from 'react-icons/gr';
+import firebase from '../Firebase/index';
 const Login = ({ history }) => {
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await Firebase.auth().signInWithEmailAndPassword(
-          email.value,
-          password.value
-        );
-        history.push("/");
+        await firebase
+          .auth()
+          .signInWithEmailAndPassword(email.value, password.value);
+        history.push('/');
       } catch (error) {
         alert(error);
       }

@@ -1,15 +1,15 @@
-import React, { useCallback, useState } from "react";
-import "./cadastro.css";
-import { withRouter } from "react-router";
-import Firebase from "../Firebase/index";
-import { GrTerminal } from "react-icons/gr";
+import React, { useCallback, useState } from 'react';
+import './cadastro.css';
+import { withRouter } from 'react-router';
+import firebase from '../Firebase/index';
+import { GrTerminal } from 'react-icons/gr';
 
 const Cadastro = ({ history }) => {
-  const [PrimeiroNome, setPrimeiroNome] = useState("");
-  const [SobreNome, setSobreNome] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [PrimeiroNome, setPrimeiroNome] = useState('');
+  const [SobreNome, setSobreNome] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
   const handleSingUp = useCallback(
     async (event) => {
       event.preventDefault();
@@ -21,19 +21,20 @@ const Cadastro = ({ history }) => {
         username,
       } = event.target.elements;
       try {
-        await Firebase.auth()
+        await firebase
+          .auth()
           .createUserWithEmailAndPassword(email.value, senha.value)
           .then(async (e) => {
             let uid = e.user.uid;
-            await Firebase.database().ref("ursers").child(uid).set({
+            await firebase.database().ref('ursers').child(uid).set({
               nome: PrimeiroNome.value,
               Sobrenome: SobreNome.value,
               username: username.value,
-              imagemPerfil: "",
+              imagemPerfil: '',
             });
           });
 
-        history.push("/");
+        history.push('/');
       } catch (error) {
         alert(error);
       }
