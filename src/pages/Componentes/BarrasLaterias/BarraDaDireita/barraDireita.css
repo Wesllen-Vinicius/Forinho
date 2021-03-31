@@ -2,6 +2,7 @@
     padding: 10px;
     flex: 0.3;
     border-right: 1px solid var(--twitter-background);
+    
 }
 .cardDireita {
     width: 350px;

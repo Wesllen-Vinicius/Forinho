@@ -4,9 +4,14 @@
   padding-right: 10px;
   background-color: aliceblue;
 }
-img{
+.tweetBox__input img{
   height: 53px;
   border-radius: 50px;
+}
+img {
+  min-width: 650px;
+  max-height: 350px;
+  
 }
 
 .tweetBox > form {

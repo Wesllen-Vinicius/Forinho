@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './post.css';
-import { FiImage } from 'react-icons/fi';
+
 import firebase from '../Firebase/index';
 import { Avatar, Button } from '@material-ui/core';
 function Post() {
@@ -12,10 +12,11 @@ function Post() {
     e.preventDefault();
 
     db.collection('posts').add({
-      displayName: 'Wesllen',
+      displayName: 'fran',
       username: 'Wes',
       text: tweetMessage,
-      image: tweetImage,
+      image:
+        'https://yt3.ggpht.com/ytc/AAUvwnh1iotPKCf7o_L6BhrU8klhUsstHCuX0I4-Jwzlow=s900-c-k-c0x00ffffff-no-rj',
     });
 
     setTweetMessage('');

@@ -1,0 +1,18 @@
+.feed{
+    background-color:white;
+    width: 800px;
+    
+   
+    
+}
+.feed::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.feed {
+    border-right: 1px solid var(--twitter-background);
+    margin-right: 20px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

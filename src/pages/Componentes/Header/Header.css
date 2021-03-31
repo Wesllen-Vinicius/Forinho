@@ -1,27 +1,31 @@
 @media only screen and (min-width: 992px) {
 
 .divBar{
-    border-bottom: 3px solid  blueviolet;
-    height: 45px;
-    background-color: aqua;
-    
-    
+    border-bottom: 2px solid indigo ;
+    height: 65px;
+    background-color:white;
+     
 }
 .busca{
-    width: 190px;
-    height: 35px;
+    background-color:lightgray;
+    width: 220px;
+    height: 45px;
     margin-top: 30px;
     margin-right: 50px;
 }
-
+.Login{
+    margin-top: 6px;
+    font-size: 25px;
+    color: indigo;
+}
 .btBuscar{
     padding: 2;
     margin-bottom: 30px;
-    height: 35px;
+    height: 42px;
 }
 
-.space{
-    
+
+.space{ 
     width: 80%;
 }
 .logo{

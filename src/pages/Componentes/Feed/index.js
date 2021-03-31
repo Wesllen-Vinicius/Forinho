@@ -4,7 +4,6 @@ import Post from '../../PostArea/index';
 import './feed.css';
 import firebase from '../../Firebase/index';
 import FlipMove from 'react-flip-move';
-import { GrOrderedList } from 'react-icons/gr';
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -19,7 +18,7 @@ function Feed() {
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Home</h2>
+        <h2>Forinho</h2>
       </div>
 
       <Post />

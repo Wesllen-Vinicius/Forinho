@@ -16,17 +16,24 @@
   
   .post__footer {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    
   }
+  .space_icons{
+    margin-right: 30px;
+  }
+ 
+ 
   
   .post__headerDescription {
     margin-bottom: 10px;
     font-size: 15px;
+    margin-right: 10px;
   }
   
   .post__headerText > h3 {
-    font-size: 15px;
+    font-size: 17px;
     margin-bottom: 5px;
   }
   
