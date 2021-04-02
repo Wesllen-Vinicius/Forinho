@@ -1,0 +1,20 @@
+.feed{
+    width: 800px;
+    margin-right: 20px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    padding: 20px;  
+}
+.Nome-Forinho{
+    text-align: center;
+    color: firebrick;
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 999;
+}
+.feed::-webkit-scrollbar {
+    display: none;
+  }
+  

@@ -1,19 +1,20 @@
-import React, { useCallback, useContext } from "react";
-import { withRouter, Redirect } from "react-router";
-import app from "../Firebase/index";
-import { AuthContext } from "../Auth/auth";
-import "./login.css";
-import { GrTerminal } from "react-icons/gr";
+import React, { useCallback, useContext } from 'react';
+import { withRouter, Redirect } from 'react-router';
+
+import { AuthContext } from '../Auth/auth';
+import './login.css';
+import { GrTerminal } from 'react-icons/gr';
+import firebase from '../Firebase/index';
 const Login = ({ history }) => {
   const handleLogin = useCallback(
     async (event) => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
-        await app
+        await firebase
           .auth()
           .signInWithEmailAndPassword(email.value, password.value);
-        history.push("/");
+        history.push('/');
       } catch (error) {
         alert(error);
       }
@@ -31,7 +32,7 @@ const Login = ({ history }) => {
     <div class="container">
       <div class="formulario">
         <form onSubmit={handleLogin}>
-          <h1>Forinho</h1>
+          <h1 class="H1-login">Forinho</h1>
           <div class="icon">
             <GrTerminal size={70} />
           </div>
@@ -48,7 +49,7 @@ const Login = ({ history }) => {
             Login
           </button>
           <div class="link">
-            <a href="/Cadastro">Cadastrar-se </a>
+            <a class="link-text" href="/Cadastro">Cadastrar-se </a>
           </div>
         </form>
       </div>

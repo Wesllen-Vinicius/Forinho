@@ -1,0 +1,19 @@
+.BarraDireita{
+    padding: 10px;
+    flex: 0.3;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    width: 382px;
+    height: 600px;
+}
+.cardDireita {
+    width: 350px;
+   
+}
+.card-body{
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom:10px;
+    border:2px solid firebrick;
+    
+}

@@ -10,20 +10,21 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 100px auto;
+        margin: 10px auto;
         padding: 10px;
         width: 500px;
         height: 540px;
         background-color:white;
         border-radius: 10px;
+        border: 2px solid lightgray;
     }
         .input {
             width: 400px;
 
         }
-    h1{
+    .H1-login{
         text-align: center;
-        color:indigo;
+        color:firebrick;
         font-family:'Courier New', Courier, monospace;
         font-size: 50px;
         margin-bottom: 5px;
@@ -40,23 +41,15 @@
       justify-content: center;
       
   }
-  .botao{
-      width: 380px;
-      background-image: linear-gradient(to right, indigo, rgb(180, 3, 180));
-      border: none;
-      border-radius: 10px;
-      padding: 10px;
-      color: white;
-    
-  }
+  
   .icon{
       margin-left: 145px;
       margin-bottom: 20px;
   }
-  a{
-      text-decoration: none;
-      color: indigo;
-  }
+  .link-text{
+    text-decoration: none;
+    color: firebrick;
+}
 
 
 }
