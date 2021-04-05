@@ -2,13 +2,13 @@ import React, { forwardRef } from 'react';
 import './BoxPost.css';
 import { Avatar } from '@material-ui/core';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { BiHeart } from 'react-icons/bi';
+import { BiMessageSquareDots } from 'react-icons/bi';
 
 const BoxPost = forwardRef(
   ({ displayName, username, text, image, avatar }, ref) => {
     return (
-      <div className="post" ref={ref}>
+      <div className="post bg-light" ref={ref}>
         <div className="post__avatar">
           <Avatar src={avatar} />
         </div>
@@ -24,12 +24,12 @@ const BoxPost = forwardRef(
               <p>{text}</p>
             </div>
           </div>
-          <img src={image} alt="" />
+          <img src={image} class="img-post" alt="" />
           <div className="post__footer">
-            <div className="space_icons">
-              <FavoriteBorderIcon fontSize="default" />
+            <div className="space-icons">
+              <BiHeart fontSize="25px" />
             </div>
-            <ChatBubbleOutlineIcon fontSize="default" />
+            <BiMessageSquareDots fontSize="25px" />
           </div>
         </div>
       </div>

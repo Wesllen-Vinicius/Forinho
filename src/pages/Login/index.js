@@ -32,7 +32,7 @@ const Login = ({ history }) => {
     <div class="container">
       <div class="formulario">
         <form onSubmit={handleLogin}>
-          <h1>Forinho</h1>
+          <h1 class="H1-login">Forinho</h1>
           <div class="icon">
             <GrTerminal size={70} />
           </div>
@@ -49,7 +49,7 @@ const Login = ({ history }) => {
             Login
           </button>
           <div class="link">
-            <a href="/Cadastro">Cadastrar-se </a>
+            <a class="link-text" href="/Cadastro">Cadastrar-se </a>
           </div>
         </form>
       </div>

@@ -2,18 +2,18 @@ import React, { useContext } from 'react';
 import './Header.css';
 import { BiLogOut } from 'react-icons/bi';
 import { AiOutlineUser } from 'react-icons/ai';
-import { GrTerminal } from 'react-icons/gr';
+import { FiTerminal } from 'react-icons/fi';
 import firebase from '../../Firebase/index';
 import { AuthContext } from '../../Auth/auth';
 
 const Header = () => {
   const { user } = useContext(AuthContext);
   return (
-    <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-light divBar">
+    <nav class="navbar sticky-top  navbar-expand-lg navbar-dark bg-dark divBar">
       <div class="container-fluid divBar">
         <div class="logo">
-          <a class="navbar-brand" href="/">
-            <GrTerminal size="70px" />
+          <a class="navbar-brand " href="/">
+            <p class="Nome-Forinho-header">Forinho</p>
           </a>
         </div>
         <div class="Menu">
@@ -38,10 +38,11 @@ const Header = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success btBuscar" type="submit">
+            <button class="btn  btBuscar" type="submit">
               Buscar
             </button>
           </form>
+          <div class="space2" />
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li class="nav-item dropdown">
               <a
@@ -52,7 +53,8 @@ const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <AiOutlineUser size={50} />
+                Francisco zoio
+                <AiOutlineUser size={40} color="white" />
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>

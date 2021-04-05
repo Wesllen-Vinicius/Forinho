@@ -1,17 +1,14 @@
 .tweetBox {
   padding-bottom: 10px;
-  border-bottom: 8px solid var(--twitter-background);
+  border-bottom: 8px solid lightgray;
   padding-right: 10px;
-  background-color: aliceblue;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 .tweetBox__input img{
   height: 53px;
   border-radius: 50px;
-}
-img {
-  min-width: 650px;
-  max-height: 350px;
-  
 }
 
 .tweetBox > form {
@@ -40,15 +37,24 @@ img {
   padding: 10px;
 }
 
-.tweetBox__tweetButton {
-  background-color: var(--twitter-color) !important;
-  border: none !important;
-  color: white !important;
-  font-weight: 900 !important;
-  text-transform: inherit !important;
-  border-radius: 30px !important;
-  width: 80px;
-  height: 40px !important;
-  margin-top: 20px !important;
-  margin-left: auto !important;
+  
+.btnPostar{
+
+  border: none;
+  width: 70px;
+  height: 38px;
+  color: white;
+  background-color: firebrick;
+  
+}
+.footer-post{
+display: flex;
+justify-content: flex-end;
+margin-right: 20px
+
+
+}
+
+.space-footer-post{
+  width: 510px;
 }

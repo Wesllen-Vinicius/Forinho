@@ -16,13 +16,9 @@ function Feed() {
   }, []);
 
   return (
-    <div className="feed">
-      <div className="feed__header">
-        <h2>Forinho</h2>
-      </div>
-
+    <div className="feed bg-dark container-sm">
+      <div className="feed__header"></div>
       <Post />
-
       <FlipMove>
         {posts.map((post) => (
           <BoxPost

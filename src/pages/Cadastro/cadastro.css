@@ -4,14 +4,15 @@
         margin: 0 auto;
     }
 
-    .formulario {
+    .formularioCadastro {
+        border: 2px solid lightgray;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 100px auto;
+        margin: 10px auto;
         padding: 10px;
         width: 500px;
-        height: 540px;
+        height: 580px;
         background-color:white;
         border-radius: 10px;
     }
@@ -19,24 +20,14 @@
             width: 400px;
 
         }
-    h1{
-        text-align: center;
-        color:indigo;
-        font-family:'Courier New', Courier, monospace;
-        font-size: 50px;
-        margin-bottom: 5px;
-  } 
+    
 
   .inputLogin{
       width: 380px;
       
   }
  
-  button{
-     
-      margin-top: 30px;
-      margin-bottom: 10px;
-  }
+ 
   .link{
       display: flex;
       justify-content: center;
@@ -44,16 +35,18 @@
   }
   .botao{
       width: 380px;
-      background-image: linear-gradient(to right, indigo, rgb(180, 3, 180));
+      background-image: linear-gradient(to right, black, firebrick);
       border: none;
       border-radius: 10px;
       padding: 10px;
       color: white;
+      margin-top: 30px;
+      margin-bottom: 10px;
   }
  
-  a{
+  .link-text{
       text-decoration: none;
-      color: indigo;
+      color: firebrick;
   }
 
 

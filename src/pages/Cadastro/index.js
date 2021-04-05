@@ -6,7 +6,6 @@ import { GrTerminal } from 'react-icons/gr';
 
 const Cadastro = ({ history }) => {
   const [PrimeiroNome, setPrimeiroNome] = useState('');
-  const [SobreNome, setSobreNome] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -17,7 +16,6 @@ const Cadastro = ({ history }) => {
         senha,
         email,
         PrimeiroNome,
-        SobreNome,
         username,
       } = event.target.elements;
       try {
@@ -28,7 +26,6 @@ const Cadastro = ({ history }) => {
             let uid = e.user.uid;
             await firebase.database().ref('ursers').child(uid).set({
               nome: PrimeiroNome.value,
-              Sobrenome: SobreNome.value,
               username: username.value,
               imagemPerfil: '',
             });
@@ -44,9 +41,9 @@ const Cadastro = ({ history }) => {
 
   return (
     <div class="container">
-      <div class="formulario">
+      <div class="formularioCadastro">
         <form onSubmit={handleSingUp}>
-          <h1>Forinho</h1>
+          <h1 class="H1-login">Forinho</h1>
           <div class="icon">
             <GrTerminal size={70} />
           </div>
@@ -70,16 +67,7 @@ const Cadastro = ({ history }) => {
             />
             <label for="floatingInput">Username</label>
           </div>
-          <div class="form-floating mb-3 inputLogin">
-            <input
-              type="text"
-              class="form-control"
-              name="SobreNome"
-              value={SobreNome}
-              onChange={(e) => setSobreNome(e.target.value)}
-            />
-            <label for="floatingInput">Sobrenome</label>
-          </div>
+    
           <div class="form-floating mb-3 inputLogin">
             <input
               type="email"
@@ -102,12 +90,12 @@ const Cadastro = ({ history }) => {
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary botao">
+            <button type="submit" class="btn botao">
               Cadastrar
             </button>
           </div>
           <div class="link">
-            <a href="/Login"> Login </a>
+            <a class="link-text" href="/Login"> Login </a>
           </div>
         </form>
       </div>

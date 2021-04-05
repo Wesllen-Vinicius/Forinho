@@ -1,18 +1,38 @@
+
 .feed{
-    background-color:white;
     width: 800px;
-    
-   
-    
+    margin-right: 20px;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    padding: 20px;  
+}
+.Nome-Forinho{
+    text-align: center;
+    color: firebrick;
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 999;
 }
 .feed::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-.feed {
-    border-right: 1px solid var(--twitter-background);
-    margin-right: 20px;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
+  @media only screen and (max-width: 1285px) {
+    .feed{
+        width: 1200px;
+    }
+    }
+
+    @media only screen and (max-width: 770px) {
+    .feed{
+            width:700px;
+            
+        }
+        }
+        @media only screen and (max-width: 576px) {
+            .feed{
+                    width:550px;
+                    
+                }
+                }

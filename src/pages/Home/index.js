@@ -8,10 +8,10 @@ const Home = () => (
   <div>
     <Header />
 
-    <div class="page">
+    <div class="page container-sm">
       <BarraEsquerda />
 
-      <div class="feed">
+      <div>
         <Feed />
       </div>
 

@@ -1,68 +1,80 @@
-@media only screen and (min-width: 992px) {
 
+@media only screen and (min-width: 992px) {
 .divBar{
-    border-bottom: 2px solid indigo ;
-    height: 65px;
-    background-color:white;
+    border-bottom: 2px solid lightgray;
+    height: 46px;
+    
      
 }
+.Nome-Forinho-header{
+    color: firebrick;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    margin-top: 50px;
+}
+
 .busca{
-    background-color:lightgray;
+    background-color:white;
     width: 220px;
-    height: 45px;
-    margin-top: 30px;
+    height: 38px;
     margin-right: 50px;
 }
 .Login{
     margin-top: 6px;
     font-size: 25px;
-    color: indigo;
 }
 .btBuscar{
-    padding: 2;
-    margin-bottom: 30px;
-    height: 42px;
+    border: none;
+    
+    height: 38px;
+    color: white;
+    background-color: firebrick;
+
 }
 
 
 .space{ 
-    width: 80%;
+    width: 35%;
+}
+.space2{
+    width: 60%;
+
 }
 .logo{
     margin-left: 30px;
     }
 }
 @media only screen and (max-width: 992px) {
-.divBar{
-    background-color: none;
 
+.Nome-Forinho-header{
+    color: firebrick;
+    font-size: 30px;
+    font-family:'Courier New', Courier, monospace;
+    height: 5px;
+    
 }
-a{
-    color: white;
-}
-    .space{
+
+.space{
     display: none;
 }
+.busca{
+max-height: 45px;
+   
+}
+.btBuscar{
+    border: none;
+    margin-top: 23px;
+    height: 40px;
+    color: white;
+    background-color: firebrick;
+
+}
 .Menu{
-    height: 70px;
+    height: 20px;
     margin-bottom: 20px;
 }
 .busca{
     height: 4em;
     margin-top: 20px;
-}
-}
-@media only screen and (max-width: 721px) {
-.Menu{
-    margin-top: 30px;
-}
-.btBuscar{
-    height: 50px;
-    margin-top: 25px;
-
-
-}
-.logo{
-margin-bottom: 20px;
 }
 }

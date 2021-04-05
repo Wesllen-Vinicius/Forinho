@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './post.css';
-
+import { ImFileVideo } from 'react-icons/im';
+import { BsImages } from 'react-icons/bs';
 import firebase from '../Firebase/index';
 import { Avatar, Button } from '@material-ui/core';
 function Post() {
@@ -15,8 +16,7 @@ function Post() {
       displayName: 'fran',
       username: 'Wes',
       text: tweetMessage,
-      image:
-        'https://yt3.ggpht.com/ytc/AAUvwnh1iotPKCf7o_L6BhrU8klhUsstHCuX0I4-Jwzlow=s900-c-k-c0x00ffffff-no-rj',
+      image:tweetImage,
     });
 
     setTweetMessage('');
@@ -35,13 +35,21 @@ function Post() {
             type="text"
           />
         </div>
+        <div class="footer-post">
+    
+        <BsImages size={25}/>
+        <div class="space-icons"/>
+        <ImFileVideo size={25}/>
+        <div class="space-footer-post"/>
         <Button
           onClick={sendTweet}
           type="submit"
-          className="tweetBox__tweetButton"
+          class="btn btnPostar"
         >
           Postar
         </Button>
+        </div>
+        
       </form>
     </div>
   );

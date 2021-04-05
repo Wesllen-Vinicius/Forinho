@@ -1,9 +1,24 @@
 .BarraDireita{
     padding: 10px;
     flex: 0.3;
-    border-right: 1px solid var(--twitter-background);
-    
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    width: 382px;
+    height: 600px;
 }
 .cardDireita {
     width: 350px;
+   
+}
+.card-body{
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom:10px;
+    border:2px solid firebrick;
+    
+}
+@media only screen and (max-width: 1285px) {
+.BarraDireita{
+    display: none;
+}
 }
