@@ -13,6 +13,7 @@ const BarraDireita = () => (
         </p>
         <a
           href="https://br.ccm.net/faq/9841-os-diferentes-tipos-de-programas-maliciosos"
+          target="_blank"
           class="card-link"
         >
           Publicação original

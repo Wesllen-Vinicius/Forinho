@@ -1,4 +1,7 @@
-.BarraDireita{
+.cardNerdices{ 
+    top: 630px;
+    right: 372px;
+    position: relative;
     padding: 10px;
     flex: 0.3;
     border: 2px solid lightgray;
@@ -6,25 +9,16 @@
     width: 382px;
     height: 600px;
 }
-.cardDireita {
-    width: 350px;
-   
-}
-.card-body{
-    background-color: white;
-    border-radius: 8px;
-    margin-bottom:10px;
-    border:2px solid firebrick;
-    
-}
+
+
 @media only screen and (max-width: 1376px) {
-    .BarraDireita{
+    .cardNerdices{
         width: 400px;
-        margin-left: 20px;
+        
     }
 }
 @media only screen and (max-width: 992px) {
-.BarraDireita{
+.cardNerdices{
     display: none;
 }
 }

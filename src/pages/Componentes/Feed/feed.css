@@ -18,21 +18,52 @@
 .feed::-webkit-scrollbar {
     display: none;
   }
-  @media only screen and (max-width: 1285px) {
-    .feed{
-        width: 1200px;
-    }
-    }
 
-    @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 1376px) {
     .feed{
-            width:700px;
+        width:550px;
+        margin: 0;
             
+    } 
+        
         }
-        }
-        @media only screen and (max-width: 576px) {
+        @media only screen and (max-width: 992px) {
             .feed{
-                    width:550px;
+                width:850px;
+                margin: 0;
                     
-                }
-                }
+            } 
+        }
+
+@media only screen and (max-width: 760px) {
+    .feed{
+        width:700px;
+        margin: 0;
+            
+    }   
+}
+@media only screen and (max-width: 414px) {
+    .feed{
+       width: 400px;
+       margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .feed{
+        width: 360px;
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .feed{
+        width: 350px;
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .feed{
+        width: 310px;
+        margin-left: 5px;
+    }
+}
+

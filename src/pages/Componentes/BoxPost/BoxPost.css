@@ -11,6 +11,7 @@
   .post__body {
     flex: 1;
     padding: 10px;
+    flex-wrap: wrap;
 
   }
   .img-post{
@@ -29,9 +30,10 @@
     margin-top: 5px;
     
   }
-  .space-icons{
+  .post__footer svg{
     margin-right: 20px;
   }
+ 
  
   .post__headerDescription {
     margin-bottom: 10px;
@@ -58,4 +60,8 @@
   .post__avatar {
     padding: 20px;
   }
-  
+  @media only screen and (max-width: 570px) {
+    .post__body{
+            padding: 0;
+        }
+        }

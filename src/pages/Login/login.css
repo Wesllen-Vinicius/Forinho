@@ -1,4 +1,4 @@
-@media only screen and (min-width: 720px) {
+
     .fundo{
         background-image: linear-gradient(to right, indigo, rgb(117, 4, 117));
     }
@@ -52,4 +52,3 @@
 }
 
 
-}

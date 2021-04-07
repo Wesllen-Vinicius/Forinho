@@ -16,7 +16,7 @@ function Post() {
       displayName: 'fran',
       username: 'Wes',
       text: tweetMessage,
-      image:tweetImage,
+      image: tweetImage,
     });
 
     setTweetMessage('');
@@ -36,20 +36,14 @@ function Post() {
           />
         </div>
         <div class="footer-post">
-    
-        <BsImages size={25}/>
-        <div class="space-icons"/>
-        <ImFileVideo size={25}/>
-        <div class="space-footer-post"/>
-        <Button
-          onClick={sendTweet}
-          type="submit"
-          class="btn btnPostar"
-        >
-          Postar
-        </Button>
+          <div class="footer-post-icons">
+            <BsImages size={25} />
+            <ImFileVideo size={25} />
+          </div>
+          <Button onClick={sendTweet} type="submit" class="btn btnPostar">
+            Postar
+          </Button>
         </div>
-        
       </form>
     </div>
   );

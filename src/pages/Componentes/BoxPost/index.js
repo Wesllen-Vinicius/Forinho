@@ -26,9 +26,7 @@ const BoxPost = forwardRef(
           </div>
           <img src={image} class="img-post" alt="" />
           <div className="post__footer">
-            <div className="space-icons">
-              <BiHeart fontSize="25px" />
-            </div>
+            <BiHeart fontSize="25px" />
             <BiMessageSquareDots fontSize="25px" />
           </div>
         </div>
