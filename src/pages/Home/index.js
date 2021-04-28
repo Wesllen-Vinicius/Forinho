@@ -15,6 +15,7 @@ function Home() {
   const [carregando, setCarregando] = useState(1);
   const usuarioUsername = useSelector((state) => state.usuarioUsername);
   let listatopico = [];
+
   useEffect(() => {
     firebase
       .firestore()
@@ -35,6 +36,7 @@ function Home() {
         setCarregando(0);
       });
   }, [pesquisa]);
+
   return (
     <>
       <Header />
@@ -56,6 +58,7 @@ function Home() {
                 texto={item.texto}
                 visualizacoes={item.visualizacao}
                 username={item.username}
+                tag={item.tag}
               />
             ))}
           </div>
@@ -67,7 +70,9 @@ function Home() {
               className="form-control text-center mb-2"
               placeholder="Pesquisa"
             />
+
             <BarraDaDireita />
+
             <CardNerdices />
           </div>
         </div>

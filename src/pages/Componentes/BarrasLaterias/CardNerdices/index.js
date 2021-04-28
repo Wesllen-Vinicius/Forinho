@@ -1,7 +1,7 @@
 import React from 'react';
 import '../CardNerdices/cardNerdices.css';
 const CardNerdices = () => (
-  <div class="cardNerdices bg-dark">
+  <div class="cardNerdices bg-dark text-white">
     <h1 class="Nome-Forinho">Nerdices</h1>
     <div class="cardDireita">
       <div class="card-body"></div>

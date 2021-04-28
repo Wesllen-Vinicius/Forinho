@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './detalheTopico.css';
 import firebase from '../../config/firebase';
 
-import { useSelector } from 'react-redux';
+import { BsEyeFill } from 'react-icons/bs';
 import Header from '../Componentes/Header';
 import Footer from '../Componentes/Footer';
 
@@ -12,23 +12,36 @@ function DetalheTopico(props) {
   const [carregando, setCarregando] = useState(1);
 
   useEffect(() => {
-    firebase
-      .firestore()
-      .collection('topicos')
-      .doc(props.match.params.id)
-      .get()
-      .then((resultado) => {
-        setTopico(resultado.data());
-        firebase
-          .storage()
-          .ref(`imagens/${topico.foto}`)
-          .getDownloadURL()
-          .then((url) => {
-            setUrlImg(url);
-            setCarregando(0);
-          });
-      });
-  }, [topico.foto]);
+    if (carregando) {
+      firebase
+        .firestore()
+        .collection('topicos')
+        .doc(props.match.params.id)
+        .get()
+        .then((resultado) => {
+          setTopico(resultado.data());
+          firebase
+            .firestore()
+            .collection('topicos')
+            .doc(props.match.params.id)
+            .update('visualizacao', resultado.data().visualizacao + 1);
+          firebase
+            .storage()
+            .ref(`imagens/${resultado.data().foto}`)
+            .getDownloadURL()
+            .then((url) => {
+              setUrlImg(url);
+              setCarregando(0);
+            });
+        });
+    } else {
+      firebase
+        .storage()
+        .ref(`imagens/${topico.foto}`)
+        .getDownloadURL()
+        .then((url) => setUrlImg(url));
+    }
+  }, []);
   return (
     <>
       <Header />
@@ -41,19 +54,32 @@ function DetalheTopico(props) {
           </div>
         ) : (
           <div>
-            <div className="row">
+            <div className="row ">
               <h1 className="text-center">{topico.titulo}</h1>
-              <img src={urlImg} className="img-banner" alt="Banner Topico" />
-              <div className=" my-1 bg-dark ">
-                <p className="text-justify p-3 text-white texto-topico">
-                  {topico.texto}
-                </p>
-                <div className="text-white">
+              <img
+                src={urlImg}
+                className="img-banner mx-auto"
+                alt="Banner Topico"
+              />
+              <div className=" my-1 bg-dark div-texto-topico ">
+                <p className=" p-3 text-white texto-topico">{topico.texto}</p>
+                <div className="row text-white text-end">
                   <span>{topico.username}</span>
-
                   <span>{topico.data}</span>
                 </div>
               </div>
+            </div>
+            <div className="vizualizacao-detalhe">
+              <BsEyeFill size={25} />
+              <span className="p-2"> {topico.visualizacao}</span>
+            </div>
+            <div className="btn-responder mt-3 ">
+              <button
+                type="button"
+                className="btn btn-lg btn-block  mt-2 mb-3 "
+              >
+                Responder
+              </button>
             </div>
           </div>
         )}
