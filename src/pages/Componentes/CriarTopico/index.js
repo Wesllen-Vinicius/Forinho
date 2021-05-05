@@ -29,6 +29,35 @@ function CriarTopico() {
     if (!titulo || !texto || !tag) {
       setMsgTipo('erro');
       setCarregando(0);
+    } else if (tag === 'Nerdices') {
+      storage
+        .ref(`imagens/${foto.name}`)
+        .put(foto)
+        .then(() => {
+          db.collection('Nerdices')
+            .add({
+              titulo: titulo,
+              texto: texto,
+              username: usuarioEmail,
+              foto: foto.name,
+              publico: 1,
+              tag: tag,
+              visualizacao: 0,
+              data: new Date().toLocaleDateString('pt-BR', options),
+              criacao: new Date(),
+            })
+            .then(() => {
+              setMsgTipo('sucesso');
+              setCarregando(0);
+              setTexto('');
+              setTitulo('');
+            })
+
+            .catch((erro) => {
+              setMsgTipo('erro');
+              setCarregando(0);
+            });
+        });
     } else {
       storage
         .ref(`imagens/${foto.name}`)

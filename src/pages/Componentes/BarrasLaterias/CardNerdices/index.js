@@ -1,13 +1,46 @@
-import React from 'react';
-import '../CardNerdices/cardNerdices.css';
-const CardNerdices = () => (
-  <div class="cardNerdices bg-dark text-white">
-    <h1 class="Nome-Forinho">Nerdices</h1>
-    <div class="cardDireita">
-      <div class="card-body"></div>
-      <h1>aqui</h1>
-      <div class="card-body"></div>
-    </div>
-  </div>
-);
+import React, { useState, useEffect } from 'react';
+import firebase from '../../../../config/firebase';
+import ListNerdice from './ListNerdice';
+function CardNerdices() {
+  const [nerdices, setNerdice] = useState([]);
+  const [carregando, setCarregando] = useState(1);
+  let listanerdice = [];
+
+  useEffect(() => {
+    firebase
+      .firestore()
+      .collection('Nerdices')
+      .limit(3)
+      .orderBy('criacao', 'desc')
+      .get()
+      .then(async (resultado) => {
+        await resultado.docs.forEach((doc) => {
+          listanerdice.push({
+            id: doc.id,
+            ...doc.data(),
+          });
+        });
+
+        setNerdice(listanerdice);
+        setCarregando(0);
+      });
+  }, []);
+
+  return (
+    <>
+      {nerdices.map((item) => (
+        <ListNerdice
+          key={item.id}
+          id={item.id}
+          img={item.foto}
+          titulo={item.titulo}
+          texto={item.texto}
+          visualizacoes={item.visualizacao}
+          username={item.username}
+          tag={item.tag}
+        />
+      ))}
+    </>
+  );
+}
 export default CardNerdices;

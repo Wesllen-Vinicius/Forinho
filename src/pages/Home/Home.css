@@ -12,3 +12,13 @@
 
     width: 100%;
 }
+.cardNerdices{ 
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    width: 382px;
+    height: 600px;
+}
+.cardNerdices h1{
+    color: firebrick;
+}

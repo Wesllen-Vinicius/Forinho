@@ -9,6 +9,7 @@ import DetalheTopico from '../src/pages/DetalheTopico';
 import { Provider } from 'react-redux';
 import { store, persistor } from '../src/store/';
 import { PersistGate } from 'redux-persist/integration/react';
+import DetalheNerdice from '../src/pages/Componentes/DetalheNerdice';
 function App() {
   return (
     <Provider store={store}>
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/recuperarSenha" component={RecuperarSenha} />
           <Route exact path="/CriarTopico" component={CriarTopico} />
           <Route path="/detalheTopico/:id" component={DetalheTopico} />
+          <Route path="/detalheNerdice/:id" component={DetalheNerdice} />
         </Router>
       </PersistGate>
     </Provider>

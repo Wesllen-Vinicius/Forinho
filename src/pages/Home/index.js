@@ -4,10 +4,10 @@ import firebase from '../../config/firebase';
 import ListTopicos from '../Componentes/listTopicos';
 import { useSelector } from 'react-redux';
 import Footer from '../Componentes/Footer/index';
-import CardNerdices from '../Componentes/BarrasLaterias/CardNerdices/index';
-
 import Header from '../Componentes/Header';
 import BarraDaDireita from '../Componentes/BarrasLaterias/BarraDaDireita/index';
+
+import CardNerdices from '../Componentes/BarrasLaterias/CardNerdices';
 
 function Home() {
   const [topicos, setTopicos] = useState([]);
@@ -72,8 +72,10 @@ function Home() {
             />
 
             <BarraDaDireita />
-
-            <CardNerdices />
+            <div className="cardNerdices bg-dark">
+              <h1 className="text-center">Nerdices</h1>
+              <CardNerdices />
+            </div>
           </div>
         </div>
       )}
