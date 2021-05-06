@@ -14,7 +14,7 @@ function ListTopicos({ id, img, titulo, texto, visualizacoes, username, tag }) {
       .then((url) => setUrlImagem(url));
   }, [urlImagem]);
   return (
-    <div className="col-md-7 col-sm-12 card-topico mx-auto bg-dark p-3 text-white">
+    <div className="col-md-8 col-sm-12 card-topico mx-auto bg-dark p-3 text-white">
       <img
         id="banner-topico"
         src={urlImagem}

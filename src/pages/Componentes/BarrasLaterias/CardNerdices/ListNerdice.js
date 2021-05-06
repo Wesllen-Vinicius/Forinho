@@ -9,7 +9,7 @@ function ListNerdice({ id, titulo, texto, visualizacoes, username, tag }) {
     <div className="card-body fundo-card">
       <h5 className="card-title">{titulo}</h5>
 
-      <p className="card-text">{texto}</p>
+      <p className="card-text text-truncate">{texto}</p>
       <div className="row rodape-card d-flex align-items-center ">
         <div className="col-6 mb-2">
           <Link

@@ -24,7 +24,7 @@ function Home() {
       .get()
       .then(async (resultado) => {
         await resultado.docs.forEach((doc) => {
-          if (doc.data().titulo.indexOf(pesquisa) >= 0) {
+          if (doc.data().tag.indexOf(pesquisa) >= 0) {
             listatopico.push({
               id: doc.id,
               ...doc.data(),
@@ -47,7 +47,7 @@ function Home() {
           </div>
         </div>
       ) : (
-        <div className="page ">
+        <div className="page">
           <div className="mt-5 col-md-9 col-sm-12 ">
             {topicos.map((item) => (
               <ListTopicos
@@ -71,10 +71,13 @@ function Home() {
               placeholder="Pesquisa"
             />
 
-            <BarraDaDireita />
-            <div className="cardNerdices bg-dark">
-              <h1 className="text-center">Nerdices</h1>
-              <CardNerdices />
+            <div className=" barraFixa">
+              <BarraDaDireita />
+
+              <div className="cardNerdices bg-dark  barraFixa">
+                <h1 className="text-center">Nerdices</h1>
+                <CardNerdices />
+              </div>
             </div>
           </div>
         </div>

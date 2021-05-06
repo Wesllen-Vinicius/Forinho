@@ -1,6 +1,6 @@
 .page{
     display: flex ;
-    margin: 0 auto;
+    margin: 0, auto;
     padding: 10px;
     padding-top: 20px;
     padding-inline-end: 10px;
@@ -17,8 +17,13 @@
     border: 2px solid lightgray;
     border-radius: 8px;
     width: 382px;
-    height: 600px;
+    height: 540px;
+  
 }
 .cardNerdices h1{
     color: firebrick;
+}
+.barraFixa{
+position: sticky;
+top: 55px;
 }

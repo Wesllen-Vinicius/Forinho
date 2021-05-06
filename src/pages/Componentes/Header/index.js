@@ -2,7 +2,6 @@ import React from 'react';
 import './Header.css';
 import { BiLogOut } from 'react-icons/bi';
 import { AiOutlineUser } from 'react-icons/ai';
-import { BiCog } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -22,9 +21,6 @@ function Header() {
           <>
             <Link to="/CriarTopico" className="Link-Novo-Topico btn">
               Novo Topico
-            </Link>
-            <Link>
-              <BiCog to="/" size={40} />
             </Link>
             <Link>
               <AiOutlineUser to="/" size={40} />
