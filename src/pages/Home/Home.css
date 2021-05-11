@@ -27,3 +27,9 @@
 position: sticky;
 top: 55px;
 }
+
+@media (max-width: 750px) {
+    .Resposive{
+        display:none
+    }
+ }

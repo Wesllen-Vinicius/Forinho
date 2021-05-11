@@ -48,7 +48,7 @@ function Home() {
         </div>
       ) : (
         <div className="page">
-          <div className="mt-5 col-md-9 col-sm-12 ">
+          <div className="mt-5 col-12 col-sm-5 col-md-6 col-lg-7  col-xl-8 	col-xxl-9">
             {topicos.map((item) => (
               <ListTopicos
                 key={item.id}
@@ -59,11 +59,12 @@ function Home() {
                 visualizacoes={item.visualizacao}
                 username={item.username}
                 tag={item.tag}
+                tag2={item.tag2}
               />
             ))}
           </div>
 
-          <div className="pe-5 ">
+          <div className="Resposive">
             <input
               onChange={(e) => setPesquisa(e.target.value)}
               type="text"
@@ -71,13 +72,14 @@ function Home() {
               placeholder="Pesquisa"
             />
 
-            <div className=" barraFixa">
+            <div className="cardNerdices bg-dark barraFixa">
+              <h1 className="text-center">Topicos</h1>
               <BarraDaDireita />
+            </div>
 
-              <div className="cardNerdices bg-dark  barraFixa">
-                <h1 className="text-center">Nerdices</h1>
-                <CardNerdices />
-              </div>
+            <div className="cardNerdices bg-dark barraFixa  ">
+              <h1 className="text-center">Nerdices</h1>
+              <CardNerdices />
             </div>
           </div>
         </div>

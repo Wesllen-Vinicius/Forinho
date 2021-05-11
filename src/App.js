@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import { store, persistor } from '../src/store/';
 import { PersistGate } from 'redux-persist/integration/react';
 import DetalheNerdice from '../src/pages/Componentes/DetalheNerdice';
+import Perfil from '../src/pages/Perfil';
 function App() {
   return (
     <Provider store={store}>
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/CriarTopico" component={CriarTopico} />
           <Route path="/detalheTopico/:id" component={DetalheTopico} />
           <Route path="/detalheNerdice/:id" component={DetalheNerdice} />
+          <Route exact path="/perfil" component={Perfil} />
         </Router>
       </PersistGate>
     </Provider>

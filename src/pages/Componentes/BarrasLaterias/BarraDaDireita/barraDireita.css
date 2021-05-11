@@ -3,7 +3,7 @@
     border: 2px solid lightgray;
     border-radius: 8px;
     width: 382px;
-    height: 550px;
+    height: 330px;
 }
 .cardDireita {
     width: 350px;
@@ -19,14 +19,4 @@
     border:2px solid firebrick;
     
 }
-@media only screen and (max-width: 1376px) {
-    .BarraDireita{
-        width: 400px;
-        margin-left: 20px;
-    }
-}
-@media only screen and (max-width: 992px) {
-.BarraDireita{
-    display: none;
-}
-}
+

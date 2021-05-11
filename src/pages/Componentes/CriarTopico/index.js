@@ -11,6 +11,8 @@ function CriarTopico() {
   const [texto, setTexto] = useState('');
   const [foto, setFoto] = useState('');
   const [tag, setTag] = useState('');
+  const [OndePostar, setOndePostar] = useState('');
+  const [tag2, setTag2] = useState('');
   const [msgTipo, setMsgTipo] = useState('');
 
   const usuarioEmail = useSelector((state) => state.usuarioEmail);
@@ -26,10 +28,10 @@ function CriarTopico() {
   function cadastrarTopico() {
     setMsgTipo(null);
     setCarregando(1);
-    if (!titulo || !texto || !tag) {
+    if (!titulo || !texto || !tag || !OndePostar || !tag2) {
       setMsgTipo('erro');
       setCarregando(0);
-    } else if (tag === 'Nerdices') {
+    } else if (OndePostar === 'Nerdices') {
       storage
         .ref(`imagens/${foto.name}`)
         .put(foto)
@@ -42,6 +44,7 @@ function CriarTopico() {
               foto: foto.name,
               publico: 1,
               tag: tag,
+              tag2:tag2,
               visualizacao: 0,
               data: new Date().toLocaleDateString('pt-BR', options),
               criacao: new Date(),
@@ -71,6 +74,7 @@ function CriarTopico() {
               foto: foto.name,
               publico: 1,
               tag: tag,
+              tag2:tag2,
               visualizacao: 0,
               data: new Date().toLocaleDateString('pt-BR', options),
               criacao: new Date(),
@@ -93,8 +97,8 @@ function CriarTopico() {
   return (
     <>
       <Header />
-      <div className="page-novo-topico  ">
-        <div className="text-center mt-3 ">
+      <div className="page-novo-topico ">
+        <div className="text-center mt-1 ">
           <h3>Novo Topico</h3>
         </div>
         <div className="px-5">
@@ -109,19 +113,47 @@ function CriarTopico() {
                 value={titulo}
               />
             </div>
-            <div className="form-group  form-criar-topico mx-auto">
-              <label className="my-1">Tag:</label>
+            <div  className="row my-2">
+            <div className="form-group  form-criar-topico col-sm-3">
+              <label className="my-1 pe-1">Onde Postar: </label>
               <select
-                className="bg-dark text-white mt-3 ml-3 p-1"
+                className="bg-dark text-white p-1"
+                name="tags"
+                onChange={(e) => setOndePostar(e.target.value)}
+              >
+                <option selected></option>
+                <option value="Nerdices">Nerdices</option>
+                <option value="Topicos">Feed</option>
+              </select>
+            </div>
+            <div className="form-group  form-criar-topico col-sm-3">
+              <label className="my-1 pe-1">1-Tag:</label>
+              <select
+                className="bg-dark text-white p-1"
                 name="tags"
                 onChange={(e) => setTag(e.target.value)}
               >
-                <option selected>Tag</option>
-                <option value="Informatica">Informatica</option>
-                <option value="Nerdices">Nerdices</option>
-                <option value="Politica">Política</option>
-                <option value="Flamengo">Flamengo</option>
+                <option selected > </option>
+                <option value="Informática">Informática</option>
+                <option value="Política">Política</option>
+                <option value="Filmes">Filmes</option>
+                <option value="Animes">Animes</option>
               </select>
+            </div>
+            <div className="form-group  form-criar-topico col-sm-3 ">
+              <label className="my-1 pe-1">2-Tag:</label>
+              <select
+                className="bg-dark text-white  p-1 "
+                name="tags"
+                onChange={(e) => setTag2(e.target.value)}
+              >
+                <option selected > </option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                <option value="LongaMetragem">Longa Metragem</option>
+                <option value="CurtaMetragem">Curta Metragem</option>
+              </select>
+            </div>
             </div>
             <div className="form-group textarea-texto  form-criar-topico mx-auto">
               <label className="my-1">Texto:</label>
@@ -157,11 +189,11 @@ function CriarTopico() {
                   <span className="sr-only"></span>
                 </div>
               ) : (
-                <div className="btn-cadastro-topico mt-3 ">
+                <div className="btn-cadastro-topico mt-1 ">
                   <button
                     type="button"
                     onClick={cadastrarTopico}
-                    className="btn btn-lg btn-block  mt-2 mb-3 "
+                    className="btn btn-lg btn-block   mb-3 "
                   >
                     Cadastrar Topico
                   </button>
