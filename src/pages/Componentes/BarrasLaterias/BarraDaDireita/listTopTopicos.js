@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { BsEyeFill } from 'react-icons/bs';
@@ -20,6 +20,7 @@ function ListTopTopicos({ id, titulo, texto, visualizacoes, username, tag }) {
           <span className="p-2"> {visualizacoes}</span>
           <BsEyeFill size={25} />
         </div>
+        <hr />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import firebase from '../../../../config/firebase';
 import ListNerdice from './ListNerdice';
 function CardNerdices() {
   const [nerdices, setNerdice] = useState([]);
-  const [carregando, setCarregando] = useState(1);
+
   let listanerdice = [];
 
   useEffect(() => {
@@ -22,7 +22,6 @@ function CardNerdices() {
         });
 
         setNerdice(listanerdice);
-        setCarregando(0);
       });
   }, []);
 

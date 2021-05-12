@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import firebase from '../../../../config/firebase';
 import { BsEyeFill } from 'react-icons/bs';
 import './cardNerdices.css';
 
@@ -24,6 +23,7 @@ function ListNerdice({ id, titulo, texto, visualizacoes, username, tag }) {
           <span className="p-2"> {visualizacoes}</span>
           <BsEyeFill size={25} />
         </div>
+        <hr />
       </div>
     </div>
   );

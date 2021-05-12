@@ -27,9 +27,24 @@
 position: sticky;
 top: 55px;
 }
+.btn-trocar button{
+    text-align: right;
+}
+.hidden-button{
+    display: none;
+}
 
 @media (max-width: 750px) {
     .Resposive{
         display:none
+    }
+  
+ }
+ @media (max-width: 630px) {
+   
+    .hidden-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
  }

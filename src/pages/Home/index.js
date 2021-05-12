@@ -13,33 +13,66 @@ function Home() {
   const [topicos, setTopicos] = useState([]);
   const [pesquisa, setPesquisa] = useState('');
   const [carregando, setCarregando] = useState(1);
+  const [swaplist, setSwaplist] = useState(1);
   const usuarioUsername = useSelector((state) => state.usuarioUsername);
   let listatopico = [];
-
+  function trocandoFeed() {
+    if (swaplist === 1) {
+      setSwaplist(0);
+    } else {
+      setSwaplist(1);
+    }
+  }
   useEffect(() => {
-    firebase
-      .firestore()
-      .collection('topicos')
-      .orderBy('criacao', 'desc')
-      .get()
-      .then(async (resultado) => {
-        await resultado.docs.forEach((doc) => {
-          if (doc.data().tag.indexOf(pesquisa) >= 0) {
-            listatopico.push({
-              id: doc.id,
-              ...doc.data(),
-            });
-          }
-        });
+    if (swaplist === 1) {
+      firebase
+        .firestore()
+        .collection('topicos')
+        .orderBy('criacao', 'desc')
+        .get()
+        .then(async (resultado) => {
+          await resultado.docs.forEach((doc) => {
+            if (doc.data().tag.indexOf(pesquisa) >= 0) {
+              listatopico.push({
+                id: doc.id,
+                ...doc.data(),
+              });
+            }
+          });
 
-        setTopicos(listatopico);
-        setCarregando(0);
-      });
-  }, [pesquisa]);
+          setTopicos(listatopico);
+          setCarregando(0);
+        });
+    } else if (swaplist === 0) {
+      firebase
+        .firestore()
+        .collection('Nerdices')
+        .orderBy('criacao', 'desc')
+        .get()
+        .then(async (resultado) => {
+          await resultado.docs.forEach((doc) => {
+            if (doc.data().tag.indexOf(pesquisa) >= 0) {
+              listatopico.push({
+                id: doc.id,
+                ...doc.data(),
+              });
+            }
+          });
+
+          setTopicos(listatopico);
+          setCarregando(0);
+        });
+    }
+  }, [pesquisa, swaplist]);
 
   return (
     <>
       <Header />
+      <div className="btn-trocar text-center mt-3 hidden-button">
+        <button onClick={trocandoFeed} className="btn btn-sm btn-detalhes">
+          Trocar Feed
+        </button>
+      </div>
       {carregando > 0 ? (
         <div className="d-flex justify-content-center row">
           <div className="  spinner-border text-danger " role="status">
@@ -80,6 +113,14 @@ function Home() {
             <div className="cardNerdices bg-dark barraFixa  ">
               <h1 className="text-center">Nerdices</h1>
               <CardNerdices />
+              <div className="btn-trocar text-center">
+                <button
+                  onClick={trocandoFeed}
+                  className="btn btn-sm btn-detalhes"
+                >
+                  Trocar Feed
+                </button>
+              </div>
             </div>
           </div>
         </div>
