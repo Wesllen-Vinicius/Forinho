@@ -20,11 +20,11 @@ function Login() {
       firebase
         .auth()
         .signInWithEmailAndPassword(email, senha)
-        .then(async (data) => {
+        .then(async (resultado) => {
           await firebase
             .firestore()
             .collection('users')
-            .doc(data.user.uid)
+            .doc(resultado.user.uid)
             .get();
           setMsgTipo('sucesso');
           setTimeout(() => {

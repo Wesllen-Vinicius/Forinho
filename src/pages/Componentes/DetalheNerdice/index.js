@@ -5,6 +5,7 @@ import firebase from '../../../config/firebase';
 import { BsEyeFill } from 'react-icons/bs';
 import Header from '../Header';
 import Footer from '../Footer';
+import BoxResposta from '../BoxResposta';
 
 function DetalheNedice(props) {
   const [topico, setTopico] = useState({});
@@ -72,14 +73,6 @@ function DetalheNedice(props) {
             <div className="vizualizacao-detalhe">
               <BsEyeFill size={25} />
               <span className="p-2"> {topico.visualizacao}</span>
-            </div>
-            <div className="btn-responder mt-3 ">
-              <button
-                type="button"
-                className="btn btn-lg btn-block  mt-2 mb-3 "
-              >
-                Responder
-              </button>
             </div>
           </div>
         )}

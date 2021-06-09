@@ -44,7 +44,7 @@ function CriarTopico() {
               foto: foto.name,
               publico: 1,
               tag: tag,
-              tag2:tag2,
+              tag2: tag2,
               visualizacao: 0,
               data: new Date().toLocaleDateString('pt-BR', options),
               criacao: new Date(),
@@ -72,9 +72,8 @@ function CriarTopico() {
               texto: texto,
               username: usuarioEmail,
               foto: foto.name,
-              publico: 1,
               tag: tag,
-              tag2:tag2,
+              tag2: tag2,
               visualizacao: 0,
               data: new Date().toLocaleDateString('pt-BR', options),
               criacao: new Date(),
@@ -113,47 +112,47 @@ function CriarTopico() {
                 value={titulo}
               />
             </div>
-            <div  className="row my-2">
-            <div className="form-group  form-criar-topico col-sm-3">
-              <label className="my-1 pe-1">Onde Postar: </label>
-              <select
-                className="bg-dark text-white p-1"
-                name="tags"
-                onChange={(e) => setOndePostar(e.target.value)}
-              >
-                <option selected></option>
-                <option value="Nerdices">Nerdices</option>
-                <option value="Topicos">Feed</option>
-              </select>
-            </div>
-            <div className="form-group  form-criar-topico col-sm-3">
-              <label className="my-1 pe-1">1-Tag:</label>
-              <select
-                className="bg-dark text-white p-1"
-                name="tags"
-                onChange={(e) => setTag(e.target.value)}
-              >
-                <option selected > </option>
-                <option value="Informática">Informática</option>
-                <option value="Política">Política</option>
-                <option value="Filmes">Filmes</option>
-                <option value="Animes">Animes</option>
-              </select>
-            </div>
-            <div className="form-group  form-criar-topico col-sm-3 ">
-              <label className="my-1 pe-1">2-Tag:</label>
-              <select
-                className="bg-dark text-white  p-1 "
-                name="tags"
-                onChange={(e) => setTag2(e.target.value)}
-              >
-                <option selected > </option>
-                <option value="Hardware">Hardware</option>
-                <option value="Software">Software</option>
-                <option value="LongaMetragem">Longa Metragem</option>
-                <option value="CurtaMetragem">Curta Metragem</option>
-              </select>
-            </div>
+            <div className="row my-2">
+              <div className="form-group  form-criar-topico col-sm-3">
+                <label className="my-1 pe-1">Onde Postar: </label>
+                <select
+                  className="bg-dark text-white p-1"
+                  name="tags"
+                  onChange={(e) => setOndePostar(e.target.value)}
+                >
+                  <option selected></option>
+                  <option value="Nerdices">Nerdices</option>
+                  <option value="Topicos">Feed</option>
+                </select>
+              </div>
+              <div className="form-group  form-criar-topico col-sm-3">
+                <label className="my-1 pe-1">1-Tag:</label>
+                <select
+                  className="bg-dark text-white p-1"
+                  name="tags"
+                  onChange={(e) => setTag(e.target.value)}
+                >
+                  <option selected> </option>
+                  <option value="Informática">Informática</option>
+                  <option value="Política">Política</option>
+                  <option value="Filmes">Filmes</option>
+                  <option value="Animes">Animes</option>
+                </select>
+              </div>
+              <div className="form-group  form-criar-topico col-sm-3 ">
+                <label className="my-1 pe-1">2-Tag:</label>
+                <select
+                  className="bg-dark text-white  p-1 "
+                  name="tags"
+                  onChange={(e) => setTag2(e.target.value)}
+                >
+                  <option selected> </option>
+                  <option value="Hardware">Hardware</option>
+                  <option value="Software">Software</option>
+                  <option value="LongaMetragem">Longa Metragem</option>
+                  <option value="CurtaMetragem">Curta Metragem</option>
+                </select>
+              </div>
             </div>
             <div className="form-group textarea-texto  form-criar-topico mx-auto">
               <label className="my-1">Texto:</label>

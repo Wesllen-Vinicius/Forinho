@@ -35,7 +35,7 @@ function Cadastro(user) {
       })
       .then((resultado) => {
         setMsgTipo('sucesso');
-        dispatch({ type: 'LOG_IN', usuarioUsername: username });
+        dispatch({ type: 'LOG_IN', usuarioEmail: email });
       })
       .catch((erro) => {
         setMsgTipo('erro');

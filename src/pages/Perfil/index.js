@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Componentes/Header';
 import './perfil.css';
+import firebase from '../../config/firebase';
+import { useSelector } from 'react-redux';
 
 function Perfil() {
+  const [foto, setFoto] = useState('');
+  const usuarioUsername = useSelector((state) => state.usuarioEmail);
+
   return (
     <>
       <Header />
@@ -16,10 +21,14 @@ function Perfil() {
             />
           </div>
           <div className="col-4 mt-5 row">
-            <span className="">Username</span>
-            <span className="">Name</span>
-            <a className="">TT</a>
-            <a className="">ISNTAGRAM</a>
+            <span className="text-black">{usuarioUsername}</span>
+            <input
+              type="file"
+              className="form-control my-1"
+              accept="image/*"
+              onChange={(e) => setFoto(e.target.files[0])}
+            />
+            <button>Trocar foto</button>
           </div>
         </div>
       </div>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './detalheTopico.css';
-import firebase from '../../config/firebase';
+import firebase from '../../../config/firebase';
 
 import { BsEyeFill } from 'react-icons/bs';
-import Header from '../Componentes/Header';
-import Footer from '../Componentes/Footer';
-
+import Header from '../Header';
+import Footer from '../Footer';
+import BoxResposta from '../BoxResposta';
+import ListRespostas from '../listaRespostas';
 function DetalheTopico(props) {
   const [topico, setTopico] = useState({});
   const [urlImg, setUrlImg] = useState({});
@@ -72,14 +73,6 @@ function DetalheTopico(props) {
             <div className="vizualizacao-detalhe">
               <BsEyeFill size={25} />
               <span className="p-2"> {topico.visualizacao}</span>
-            </div>
-            <div className="btn-responder mt-3 ">
-              <button
-                type="button"
-                className="btn btn-lg btn-block  mt-2 mb-3 "
-              >
-                Responder
-              </button>
             </div>
           </div>
         )}

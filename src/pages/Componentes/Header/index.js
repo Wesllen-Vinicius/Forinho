@@ -22,9 +22,7 @@ function Header() {
             <Link to="/CriarTopico" className="Link-Novo-Topico btn">
               Novo Topico
             </Link>
-            <Link to="/perfil">
-              <AiOutlineUser size={40} />
-            </Link>
+
             <Link onClick={() => dispatch({ type: 'LOG_OUT' })}>
               <BiLogOut size={40} />
             </Link>

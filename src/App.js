@@ -5,7 +5,7 @@ import Login from '../src/pages/login';
 import CriarTopico from '../src/pages/Componentes/CriarTopico';
 import Home from '../src/pages/Home';
 import RecuperarSenha from '../src/pages/RecuperarSenha';
-import DetalheTopico from '../src/pages/DetalheTopico';
+import DetalheTopico from '../src/pages/Componentes/DetalheTopico';
 import { Provider } from 'react-redux';
 import { store, persistor } from '../src/store/';
 import { PersistGate } from 'redux-persist/integration/react';
